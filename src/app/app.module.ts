@@ -12,9 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { SummerCollectionComponent } from './home/summer-collection/summer-collection.component';
 import { PantsCollectionComponent } from './home/pants-collection/pants-collection.component';
 import { ShoesCollectionComponent } from './home/shoes-collection/shoes-collection.component';
+import { DescriptionComponent } from './description/description.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, LoginComponent, HomeComponent, SummerCollectionComponent, PantsCollectionComponent, ShoesCollectionComponent],
+  declarations: [AppComponent, NavBarComponent, LoginComponent, HomeComponent, SummerCollectionComponent, PantsCollectionComponent, ShoesCollectionComponent, DescriptionComponent, UserPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
