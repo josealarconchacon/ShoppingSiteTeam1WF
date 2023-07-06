@@ -8,9 +8,12 @@ import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { SummerCollectionComponent } from './home/summer-collection/summer-collection.component';
+import { PantsCollectionComponent } from './home/pants-collection/pants-collection.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, LoginComponent],
+  declarations: [AppComponent, NavBarComponent, LoginComponent, HomeComponent, SummerCollectionComponent, PantsCollectionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
