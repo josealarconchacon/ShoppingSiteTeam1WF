@@ -1,0 +1,20 @@
+.card-img {
+  padding-top: 100%;
+  position: relative;
+}
+
+.card {
+  border: none !important;
+  margin-bottom: 20px !important;
+}
+.card:hover {
+  box-shadow: 1px 1px 5px grey;
+  -webkit-transition: box-shadow 0.4s ease-out;
+}
+.card-img-top {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
