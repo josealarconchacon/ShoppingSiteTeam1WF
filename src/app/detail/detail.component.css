@@ -1,0 +1,106 @@
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card {
+  border: none;
+  top: -15%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 5rem 0;
+}
+.product-rating {
+  margin: -1rem 0;
+  font-size: 1.5rem;
+}
+.product-rating span {
+  font-weight: 600;
+  color: #252525;
+}
+.product-rating .checked {
+  color: orange;
+}
+.product-rating .d-review {
+  color: rgb(81, 82, 82);
+  margin: 1.5rem;
+}
+.product-price {
+  margin: 1rem 0;
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-detail h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-top: 2rem;
+  padding-bottom: 0.9rem;
+}
+.product-detail p {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+.product-detail ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.purchase-info input {
+  border: 0.2px solid #e5e5e5;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.6rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.purchase-info .quantity {
+  padding-top: 0.5rem;
+}
+.purchase-info .btn {
+  padding: 0.7rem;
+}
+.purchase-info input {
+  width: 80px;
+}
+.purchase-info .btn {
+  cursor: pointer;
+  color: #fff;
+}
+
+.purchase-info .btn:last-of-type {
+  background: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-content {
+    padding-top: 0;
+  }
+}
