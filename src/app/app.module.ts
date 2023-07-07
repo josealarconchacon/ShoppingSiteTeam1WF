@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { CollectionsComponent } from './collections/collections.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CollectionsComponent } from './collections/collections.component';
     LoginComponent,
     RegisterComponent,
     CollectionsComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

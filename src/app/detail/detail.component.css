@@ -4,7 +4,7 @@
 }
 .card {
   border: none;
-  top: -15%;
+  top: -10%;
 }
 
 img {
@@ -103,4 +103,9 @@ img {
   .product-content {
     padding-top: 0;
   }
+}
+/* Related Items  CSS */
+h3 {
+  padding-top: -100px;
+  text-align: center;
 }
