@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   homeImage: string = "./assets/home.jpg";
+  summerCollection: string = "./assets/summer-collection.jpg";
+  pantsCollection: string = "./assets/pants-collection.jpg"
+  shoesCollection: string = "./assets/shoes-collection.jpg"
 }

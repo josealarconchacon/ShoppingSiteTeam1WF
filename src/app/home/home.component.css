@@ -1,4 +1,23 @@
-.image-home {
-    width: 1000px;
+.home-image-container {
     justify-content: center;
+    display: flex;
 }
+
+.collections {
+    justify-content: center;
+    display: flex;
+}
+
+.home {
+    width: 2000px;
+}
+.summer-collection {
+    width: 900px;
+}
+.pants-collection {
+    width: 900px;
+}
+.shoes-collection {
+    width: 2000px;
+}
+

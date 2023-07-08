@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 
 export class SummerCollectionComponent {
-  summerCollection: string = "./assets/summer-collection.jpg";
   constructor(private router: Router) { }
 
 }
