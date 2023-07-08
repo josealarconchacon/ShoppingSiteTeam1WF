@@ -3,12 +3,13 @@ footer{
     margin: 0;
     color: white;
     padding:20px;
-    padding-left: 20px;
-    position: fixed;
+    position:relative;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    align-items:baseline;
 }
 
 .footer-column input{
@@ -24,7 +25,8 @@ footer{
     border: none;
 }
 .container{
-    max-width: 1200;
+    max-width: 12
+    00;
     margin: 0 auto;
     padding: 20px;
 }
