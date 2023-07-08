@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-page.component.css']
 })
 export class UserPageComponent {
-
+  userImage: string = "./assets/user.png"
 }

@@ -3,13 +3,19 @@
 </div>
 <div class="collections">
     <div class="summer-collection-container">
-    <img [src]="summerCollection" alt="Male Fashion Model" class="summer-collection">
+        <button><a (click)="navigateToCollections()" routerLink="'collections'">
+            <img [src]="summerCollection" alt="" class="summer-collection">
+          </a></button>
     </div>
     <div class="pants-collection-container">
-        <img [src]="pantsCollection" alt="pants" class="pants-collection">
+        <button><a (click)="navigateToCollections()" routerLink="'collections'">
+            <img [src]="pantsCollection" alt="" class="pants-collection">
+          </a></button>
     </div>
 </div>
 <div class="shoes-container">
-    <img [src]="shoesCollection" alt="" class="shoes-collection">
+    <button><a (click)="navigateToCollections()" routerLink="'collections'">
+        <img [src]="shoesCollection" alt="" class="shoes-collection">
+      </a></button>
 </div>
     
