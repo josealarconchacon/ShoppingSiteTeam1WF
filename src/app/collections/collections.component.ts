@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import axios from 'axios';
+
 
 @Component({
   selector: 'app-collections',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./collections.component.css']
 })
 export class CollectionsComponent {
+
 
 }
