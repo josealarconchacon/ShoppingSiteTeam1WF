@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -12,6 +13,11 @@ import { RegisterComponent } from './register/register.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { DetailComponent } from './detail/detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { FooterComponent } from './footer/footer.component';
+import {  ContactUsComponent } from './contact-us/contact-us.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +35,13 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FooterComponent,
+    ContactUsComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
