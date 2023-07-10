@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-faqs',
   templateUrl: './faqs.component.html',
-  styleUrls: ['./faqs.component.css']
+  styleUrls: ['./faqs.component.css'],
 })
-export class FAQsComponent implements OnInit{
+export class FAQsComponent implements OnInit {
+  constructor() {}
 
-  constructor(){}
-
-  ngOnInit(){}
-  id:any ='';
-  accordion(ids:any){
-    if(this.id==ids){
+  ngOnInit() {}
+  id: any = '';
+  accordion(ids: any) {
+    if (this.id == ids) {
       this.id = '';
-    }else{
+    } else {
       this.id = ids;
     }
   }
