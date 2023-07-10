@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import {  ContactUsComponent } from './contact-us/contact-us.component';
+import { FAQsComponent } from './faqs/faqs.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,8 +28,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CollectionsComponent,
     DetailComponent,
     ShoppingCartComponent,
+
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FAQsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,4 +45,5 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   providers: [],
   bootstrap: [AppComponent],
 })
+export class AppModule {}
 export class AppModule {}
