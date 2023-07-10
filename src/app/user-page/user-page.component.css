@@ -1,0 +1,37 @@
+.user {
+    display: flex;
+    justify-content: center;
+} 
+
+.gray-box {
+    width: 600px; /* Set the width of the gray box */
+    height: 300px; /* Set the height of the gray box */
+    background-color: rgb(190, 190, 190); /* Set the background color to gray */
+    border-radius: 50px;
+    
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Set the height of the container to 100% of the viewport height */
+  }
+
+  .password, .address, .card {
+    font-size: 30px;
+  }
+
+  .password-container, .address-container, .card-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  .orders-container, .items-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  
+
