@@ -10,6 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
@@ -20,6 +21,7 @@ const routers: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'user-page', component: UserPageComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'contact-us', component: ContactUsComponent },
 ];
 
 @NgModule({
