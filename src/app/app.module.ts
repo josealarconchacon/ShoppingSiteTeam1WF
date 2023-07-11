@@ -33,8 +33,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    //FooterComponent,
-    //ContactUsComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
