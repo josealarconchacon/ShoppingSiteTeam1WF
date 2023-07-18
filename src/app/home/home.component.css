@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+  }
+  
 .home-image-container {
     justify-content: center;
     display: flex;
@@ -10,14 +14,18 @@
 
 .home {
     width: 100%;
+    position: relative;
+    display: inline-block;
 }
-.summer-collection {
-    width: 100%;
+.action-collection, .comedy-collection, .drama-collection, .all-collection {
+    width: 300px;
+    margin: 60px;
+    
 }
-.pants-collection {
-    width: 100%;
-}
-.shoes-collection {
-    width: 100%;
+
+.button {
+    border: none;
+    background-color: transparent;
+    
 }
 

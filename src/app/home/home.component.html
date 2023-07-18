@@ -1,21 +1,28 @@
+<body>
 <div class="home-image-container">
 <img [src]="homeImage" alt="Male Fashion Model" class="home">
 </div>
 <div class="collections">
-    <div class="summer-collection-container">
-        <button><a (click)="navigateToCollections()" routerLink="'collections'">
-            <img [src]="summerCollection" alt="" class="summer-collection">
+    <div class="action-collection-container">
+        <button class="button"><a routerLink="/genre/Action">
+            <img [src]="actionCollection" alt="" class="action-collection">
           </a></button>
     </div>
-    <div class="pants-collection-container">
-        <button><a (click)="navigateToCollections()" routerLink="'collections'">
-            <img [src]="pantsCollection" alt="" class="pants-collection">
+    <div class="comedy-collection-container">
+        <button class="button"><a routerLink="/genre/Comedy">
+            <img [src]="comedyCollection" alt="" class="comedy-collection">
+          </a></button>
+    </div>
+    <div class="drama-collection-container">
+        <button class="button"><a routerLink="/genre/Drama">
+            <img [src]="dramaCollection" alt="" class="drama-collection">
+          </a></button>
+    </div>
+    <div class="all-collection-container">
+        <button class="button"><a routerLink="/genre/All">
+            <img [src]="allCollection" alt="" class="all-collection">
           </a></button>
     </div>
 </div>
-<div class="shoes-container">
-    <button><a (click)="navigateToCollections()" routerLink="'collections'">
-        <img [src]="shoesCollection" alt="" class="shoes-collection">
-      </a></button>
-</div>
-    
+</body>
+
