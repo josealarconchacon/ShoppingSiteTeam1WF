@@ -12,9 +12,11 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
+import { ViewAllComponent } from './view-all/view-all.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'viewAll', component: ViewAllComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'collections', component: CollectionsComponent },
   { path: 'detail', component: DetailComponent },

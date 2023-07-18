@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { DetailComponent } from './detail/detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ViewAllComponent } from './view-all/view-all.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
     FooterComponent,
     ContactUsComponent,
-    FAQsComponent
+    FAQsComponent,
+    ViewAllComponent
   ],
   imports: [
     BrowserModule,
