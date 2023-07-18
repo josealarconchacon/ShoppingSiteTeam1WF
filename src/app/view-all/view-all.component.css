@@ -10,7 +10,12 @@ body {
 .collection {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.collection .header-title {
+  font-size: 32px;
+  margin: 50px auto;
 }
 
 .collection h2 {
@@ -83,6 +88,10 @@ body {
   }
   .card .content {
     bottom: 0;
+  }
+  .collection .header-title {
+    font-size: 22px;
+    text-align: center;
   }
 }
 

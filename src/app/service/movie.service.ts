@@ -14,7 +14,7 @@ export class MovieService {
   getMovies(): Observable<any> {
     const options = {
       headers: {
-        'x-rapidapi-key': '',
+        'x-rapidapi-key': '809f52d640msh8ba44e260d0fe3ap1b72f0jsnadbfe7ffcafb',
         'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com',
       },
     };
