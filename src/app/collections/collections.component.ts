@@ -32,7 +32,7 @@ export class CollectionsComponent {
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
       }
   };
-
+  
   this.http.get<any[]>(url, options).subscribe(
     (response) => {
       console.log(response); // Log the API response
