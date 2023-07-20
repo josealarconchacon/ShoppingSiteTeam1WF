@@ -25,7 +25,6 @@ import { HomeComponent } from './home/home.component';
     CollectionsComponent,
     DetailComponent,
     ShoppingCartComponent,
-
     FooterComponent,
     ContactUsComponent,
     FAQsComponent,
