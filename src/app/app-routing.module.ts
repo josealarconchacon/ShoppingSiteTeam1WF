@@ -23,7 +23,7 @@ const routers: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'faqs', component: FAQsComponent },
-  {path: 'home', component: HomeComponent }
+  {path: '', component: HomeComponent }
 ];
 
 @NgModule({
