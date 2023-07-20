@@ -19,7 +19,7 @@ const routers: Routes = [
   { path: 'viewAll', component: ViewAllComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'collections', component: CollectionsComponent },
-  { path: 'detail', component: DetailComponent },
+  { path: 'details/:id', component: DetailComponent },
   { path: 'nav-bar', component: NavBarComponent },
   { path: 'home', component: HomeComponent },
   { path: 'user-page', component: UserPageComponent },
