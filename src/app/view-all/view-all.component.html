@@ -1,15 +1,35 @@
-<div class="collection">
+<div class="category-btn">
   <h2 class="header-title">View All Available movies</h2>
+  <button (click)="fetchMoviesByGenre('action')" class="on-hover" type="button">
+    Action
+  </button>
+  <button (click)="fetchMoviesByGenre('comedy')" class="on-hover" type="button">
+    Comedy
+  </button>
+  <button (click)="fetchMoviesByGenre('drama')" class="on-hover" type="button">
+    Drama
+  </button>
+</div>
 
+<div class="collection">
   <div *ngFor="let movie of movies" href="#" class="card">
-    <a routerLink="details" href="">
-      <div class="content">
-        <span class="title">{{ movie.title }}</span>
-        <span class="category">Realized In: {{ movie.year }}</span>
-      </div>
-      <div class="image">
-        <img src="{{ movie.image }}" alt="" />
-      </div>
-    </a>
+    <div>
+      <a [routerLink]="['/details', movie.id]" href="">
+        <div class="content">
+          <span class="title">{{ movie.title }}</span>
+          <span class="category">Realized In: {{ movie.year }}</span>
+        </div>
+        <div class="image">
+          <img src="{{ movie.image }}" alt="" />
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- search  -->
+  <div *ngIf="movies">
+    <ul>
+      <li *ngFor="let movie of movies">{{ movie.title }}</li>
+    </ul>
   </div>
 </div>

@@ -1,19 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MovieService } from '../service/movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-view-all',
   templateUrl: './view-all.component.html',
   styleUrls: ['./view-all.component.css'],
 })
-export class ViewAllComponent implements OnInit {
-  movies: any = [];
+export class ViewAllComponent implements OnInit, OnChanges {
+  movies: any[] = [];
+  genre: string = '';
 
-  constructor(private movieService: MovieService) {}
+  movieId: string;
+  movieData: any;
+
+  constructor(
+    private http: HttpClient,
+    private movieService: MovieService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getAllMovies();
+
+    this.route.params.subscribe((params) => {
+      this.movieId = params['id'];
+      // this.movieData = params['title'];
+      this.fetchMovieData();
+    });
+  }
+
+  ngOnChanges(): void {
+    this.route.paramMap.subscribe((params) => {
+      this.genre = params.get('genre') ?? '';
+      this.fetchMoviesByGenre(this.genre);
+    });
   }
 
   // get all movies
@@ -21,6 +44,52 @@ export class ViewAllComponent implements OnInit {
     this.movieService.getMovies().subscribe((response: any[]) => {
       console.log('Response:', response);
       this.movies = response;
+    });
+  }
+
+  // fetch movies category
+  fetchMoviesByGenre(genre: string): void {
+    const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
+    const options = {
+      headers: {
+        'X-RapidAPI-Key': '809f52d640msh8ba44e260d0fe3ap1b72f0jsnadbfe7ffcafb',
+        'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com',
+      },
+    };
+
+    this.http.get<any[]>(url, options).subscribe(
+      (response) => {
+        this.movies = response.filter((movie) =>
+          movie.genre.some(
+            (g: string) => g.toLowerCase() === genre.toLowerCase()
+          )
+        );
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
+  // Still need to fix this block of code to pass data to the detail component
+  // go to detail
+  fetchMovieData() {
+    const apiKey = '809f52d640msh8ba44e260d0fe3ap1b72f0jsnadbfe7ffcafb';
+    const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
+
+    this.http.get(url, { headers: { 'X-RapidAPI-Key': apiKey } }).subscribe(
+      (response: any) => {
+        this.movieData = JSON.stringify(response);
+        console.log(`Movie Data Response: ${this.movieData}`);
+      },
+      (error) => {
+        console.error('Error fetching movie data:', error);
+      }
+    );
+  }
+  goToDetail() {
+    this.router.navigate(['/details', this.movieId], {
+      state: { movieData: this.movieData },
     });
   }
 }
