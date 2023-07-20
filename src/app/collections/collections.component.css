@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 .collection .header-title {
   font-size: 32px;
