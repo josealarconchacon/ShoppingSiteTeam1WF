@@ -10,6 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FAQsComponent } from './faqs/faqs.component';
 import { HomeComponent } from './home/home.component';
 
 const routers: Routes = [
@@ -21,7 +22,8 @@ const routers: Routes = [
   { path: 'user-page', component: UserPageComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  {path: 'home', component: HomeComponent }
+  { path: 'faqs', component: FAQsComponent },
+  {path: '', component: HomeComponent }
 ];
 
 @NgModule({

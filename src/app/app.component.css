@@ -1,23 +1,22 @@
 
 .container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .img-container {
-    display: flex;
-    justify-content: center;
-} 
+  display: flex;
+  justify-content: center;
+}
 
 .home {
-    display: flex;
-    justify-content: center;
-} 
+  display: flex;
+  justify-content: center;
+}
 
 .shoes-container {
-    display: flex;
-    justify-content: center;
-} 
-
+  display: flex;
+  justify-content: center;
+}
