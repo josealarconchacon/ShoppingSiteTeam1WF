@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>These Terms and Conditions ("Terms") govern your use of the Stylehub website ("Website") and the services provided by Stylehub ("Company"). By accessing or using the Website and services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please refrain from using our Website and services. </p>
+        <h1>Terms and Conditions</h1>
+
+        <div class="faq" id="f1" (click)="accordion('f1')">
+            <button class="dropdown">
+            Account Creation and Security
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f1'">
+                <p>
+                   
+                    1. To access certain features of the Website, you may be required to create an account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.<br>
+                    2. You agree to provide accurate, current, and complete information during the account registration process. You must promptly update your account information to keep it accurate, current, and complete.<br>
+                    3. You are solely responsible for maintaining the security of your account and password. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq" id="f2" (click)="accordion('f2')">
+            <button class="dropdown">
+                Use of the Website
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f2'">
+                <p>
+                    1. You may use the Website for personal, non-commercial purposes in compliance with these Terms and all applicable laws and regulations.<br>
+                    2. You agree not to use the Website for any unlawful or prohibited purpose or in any way that could damage, disable, overburden, or impair the Website.<br>
+                    3. You acknowledge that the content on the Website, including but not limited to text, images, graphics, logos, and videos, is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, modify, distribute, or display any content from the Website without the prior written consent of the Company.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="dropdown"  id="f3" (click)="accordion('f3')">
+                Product Listings and Pricing
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f3'">
+                <p>
+                    1. The Company strives to provide accurate and up-to-date information regarding product descriptions, pricing, and availability. However, we do not guarantee the accuracy, completeness, or reliability of such information.<br>
+                    2. The Company reserves the right to modify or discontinue any product or service at any time without prior notice.<br>
+                    3. Prices displayed on the Website are subject to change without notice. The Company is not responsible for any pricing errors or discrepancies.<br>
+                    4. All purchases made through the Website are subject to our Return and Refunds Policy, which is incorporated by reference into these Terms.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f4" (click)="accordion('f4')">
+            <button class="dropdown">
+                User-Generated Content
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f4'">
+                <p>
+                    1. The Company may provide interactive features on the Website that allow users to submit, post, or upload content, such as reviews, comments, or photos ("User Content").<br>
+                    2. By submitting User Content, you grant the Company a non-exclusive, royalty-free, worldwide, perpetual, and irrevocable right to use, reproduce, modify, adapt, publish, distribute, and display such User Content for any purpose, in any media.<br>
+                    3. You represent and warrant that you own or have the necessary rights and permissions to submit the User Content and that the User Content does not violate any third-party rights or any applicable laws or regulations.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f5" (click)="accordion('f5')">
+            <button class="dropdown">
+                Limitation of Liability
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f5'">
+                <p>
+                    1. To the maximum extent permitted by law, the Company and its affiliates, directors, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or goodwill, arising out of or in connection with the use or inability to use the Website or services.<br>
+                    2. The Company makes no warranties or representations regarding the accuracy, reliability, or completeness of the content on the Website, and disclaims all liability for any errors or omissions in the content.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f6" (click)="accordion('f6')">
+            <button class="dropdown">
+                Indemnification
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f6'">
+                <p>
+                You agree to indemnify and hold harmless the Company and its affiliates, directors, officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or in connection with your use of the Website, violation of these Terms, or infringement of any third-party rights.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f7" (click)="accordion('f7')">
+            <button class="dropdown">
+                Modifications to the Terms
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f7'">
+                <p>
+                1. The Company reserves the right to modify or update these Terms at any time without prior notice. Any changes will be effective immediately upon posting the updated Terms on the Website.<br>
+                2. Your continued use of the Website after the posting of the updated Terms constitutes your acceptance of the modified Terms.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f8" (click)="accordion('f8')">
+            <button class="dropdown">
+                Governing Law and Jurisdiction
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f8'">
+                <p>
+                    These Terms shall be governed by and construed in accordance with the laws of [insert governing jurisdiction]. Any disputes arising out of or relating to these Terms shall be subject to the exclusive jurisdiction of the courts of [insert governing jurisdiction].<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -9,15 +10,29 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
-  constructor() {}
-
-  ngOnInit(): void {
-    // initialize variable to equal new FormGroup
-    this.registerForm = new FormGroup({
-      username: new FormGroup('', [Validators.required]),
-      password: new FormGroup('', [Validators.required]),
+  constructor(public fb: FormBuilder, private service: UserService) {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
     });
   }
 
-  onSubmit() {}
+  ngOnInit(): void {}
+
+  onSubmit() {
+    if (this.registerForm.valid) {
+      this.service.AddRegisterUser(this.registerForm.value).subscribe(
+        (response) => {
+          alert('Registration successful');
+          console.log(response);
+        },
+        (error) => {
+          console.error('Registration failed:', error);
+          // Handle registration error, e.g., show an error message to the user
+        }
+      );
+    }
+  }
 }

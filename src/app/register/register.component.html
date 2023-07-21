@@ -18,11 +18,25 @@
           <!-- Username -->
           <div class="form-group pb-3">
             <label for="username">Username</label>
-            <input
-              class="form-control"
-              formControlName="username"
-              type="text"
-            />
+            <input class="form-control" formControlName="username" type="text" />
+            <div
+              class="text-danger"
+              *ngIf="registerForm.get('username').errors?.['required']"
+            >
+              Username is required.
+            </div>
+          </div>
+
+          <!--Email-->
+          <div class="form-group pb-3">
+            <label for="username">Email</label>
+            <input class="form-control" formControlName="email" type="text" />
+            <div
+              class="text-danger"
+              *ngIf="registerForm.get('email').errors?.['required']"
+            >
+              Email is required.
+            </div>
           </div>
           <!-- Password -->
           <div class="form-group pb-3">
@@ -34,6 +48,12 @@
               name=""
               id=""
             />
+            <div
+              class="text-danger"
+              *ngIf="registerForm.get('password').errors?.['required']"
+            >
+              Password is required.
+            </div>
           </div>
           <!-- Confirm Password -->
           <div class="form-group pb-3">
@@ -41,21 +61,28 @@
             <input
               class="form-control"
               formControlName="confirmPassword"
-              type="confirmPassword"
+              type="password"
               name=""
               id=""
             />
+            <div
+              class="text-danger"
+              *ngIf="registerForm.get('confirmPassword').errors?.['required']"
+            >
+              Confirm Password is required.
+            </div>
           </div>
+      
           <div class="pb-2">
             <button
-              [disabled]="!registerForm.valid"
-              type="button"
-              class="btn btn-dark w-100 font-weight-bold mt-2"
-            >
+              
+              type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">
               Register
             </button>
           </div>
+          
         </form>
+      
         <div class="pt-4 text-center">
           Don't Have and Account?<a routerLink="/login" href="">/Login</a>
         </div>

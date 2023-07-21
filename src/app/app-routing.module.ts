@@ -12,6 +12,8 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
+import { ReturnAndRefundsComponent } from './return-and-refunds/return-and-refunds.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
@@ -24,6 +26,8 @@ const routers: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'faqs', component: FAQsComponent },
+  { path: 'return-and-returns', component: ReturnAndRefundsComponent },
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent},
 ];
 
 @NgModule({
