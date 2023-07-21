@@ -24,12 +24,6 @@ export class ViewAllComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.getAllMovies();
-
-    this.route.params.subscribe((params) => {
-      this.movieId = params['id'];
-      // this.movieData = params['title'];
-      this.fetchMovieData();
-    });
   }
 
   ngOnChanges(): void {
@@ -69,27 +63,5 @@ export class ViewAllComponent implements OnInit, OnChanges {
         console.error(error);
       }
     );
-  }
-
-  // Still need to fix this block of code to pass data to the detail component
-  // go to detail
-  fetchMovieData() {
-    const apiKey = '809f52d640msh8ba44e260d0fe3ap1b72f0jsnadbfe7ffcafb';
-    const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
-
-    this.http.get(url, { headers: { 'X-RapidAPI-Key': apiKey } }).subscribe(
-      (response: any) => {
-        this.movieData = JSON.stringify(response);
-        console.log(`Movie Data Response: ${this.movieData}`);
-      },
-      (error) => {
-        console.error('Error fetching movie data:', error);
-      }
-    );
-  }
-  goToDetail() {
-    this.router.navigate(['/details', this.movieId], {
-      state: { movieData: this.movieData },
-    });
   }
 }
