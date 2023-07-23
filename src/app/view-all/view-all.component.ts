@@ -1,4 +1,10 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  Input,
+  SimpleChanges,
+} from '@angular/core';
 import { MovieService } from '../service/movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';

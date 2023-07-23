@@ -13,10 +13,12 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { ViewAllComponent } from './view-all/view-all.component';
+import { SearchComponent } from './search/search.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'viewAll', component: ViewAllComponent },
+  { path: 'search', component: SearchComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'collections', component: CollectionsComponent },
   { path: 'details/:id', component: DetailComponent },

@@ -16,7 +16,9 @@
     <div>
       <a [routerLink]="['/details', movie.id]" href="">
         <div class="content">
-          <span class="title">{{ movie.title }}</span>
+          <span style="text-align: center" class="title">{{
+            movie.title
+          }}</span>
           <span class="category">Realized In: {{ movie.year }}</span>
         </div>
         <div class="image">

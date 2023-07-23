@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: black;
+  border-color: #000;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -41,6 +41,7 @@ body {
   min-height: 100px;
   background: #111;
 }
+
 .card .image {
   z-index: 1;
   height: 100%;
@@ -132,7 +133,9 @@ body {
   top: 0;
   border-radius: 10px;
 }
-
+.save-movie {
+  color: #0a9d38;
+}
 @media screen and (max-width: 768px) {
   .card {
     width: 50%;
