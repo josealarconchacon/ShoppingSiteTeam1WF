@@ -15,6 +15,7 @@ import { CollectionsComponent } from './collections/collections.component';
 import { DetailComponent } from './detail/detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HomeComponent } from './home/home.component';
+import { ViewAllComponent } from './view-all/view-all.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     ContactUsComponent,
     FAQsComponent,
-    HomeComponent
+    HomeComponent,
+    ViewAllComponent
   ],
   imports: [
     BrowserModule,

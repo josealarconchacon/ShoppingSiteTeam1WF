@@ -12,11 +12,13 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { HomeComponent } from './home/home.component';
+import { ViewAllComponent } from './view-all/view-all.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'viewAll', component: ViewAllComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'collections', component: CollectionsComponent },
+  { path: 'collections/:genre', component: CollectionsComponent },
   { path: 'detail', component: DetailComponent },
   { path: 'nav-bar', component: NavBarComponent },
   { path: 'user-page', component: UserPageComponent },
