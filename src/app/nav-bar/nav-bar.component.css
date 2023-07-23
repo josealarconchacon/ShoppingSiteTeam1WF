@@ -20,6 +20,7 @@ span {
 
 .nav-links li {
   margin-right: 20px;
+  font-size: 18px;
 }
 
 .nav-links li a {
@@ -31,16 +32,18 @@ span {
   padding: 5px;
   border: none;
   border-radius: 5px;
+  color: #000000;
 }
 
 .search-bar button {
   padding: 5px 10px;
   margin-left: 10px;
-  background-color: #333;
+  background-color: #161616;
   color: #fff;
   border: none;
   border-radius: 5px;
 }
 .search-bar button:hover {
   color: #fff;
+  background: #111;
 }

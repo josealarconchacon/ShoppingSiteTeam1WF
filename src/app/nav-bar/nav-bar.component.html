@@ -3,12 +3,16 @@
   <ul class="nav-links">
     <li><a routerLink="viewAll" href="">View All Movies</a></li>
     <li><a routerLink="user-page" href="">User</a></li>
-    <li><a routerLink="shopping-cart" href="">Save</a></li>
+    <li><a routerLink="shopping-cart" href="">My List</a></li>
     <li><a routerLink="login" href="#">Login/Register</a></li>
   </ul>
   <form class="d-flex search-bar">
-    <input type="text" placeholder="Search..." />
-    <button type="submit">Search</button>
+    <input
+      [(ngModel)]="searchTitle"
+      type="text"
+      placeholder="Search movies..."
+    />
+    <button (click)="searchMovies()" type="submit">Search</button>
   </form>
 </nav>
 <!-- navbar-light bg-light -->

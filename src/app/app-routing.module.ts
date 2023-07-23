@@ -18,8 +18,10 @@ const routers: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'viewAll', component: ViewAllComponent },
   { path: 'register', component: RegisterComponent },
+
   { path: 'collections/:genre', component: CollectionsComponent },
-  { path: 'detail', component: DetailComponent },
+  { path: 'details/:id', component: DetailComponent },
+
   { path: 'nav-bar', component: NavBarComponent },
   { path: 'user-page', component: UserPageComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
