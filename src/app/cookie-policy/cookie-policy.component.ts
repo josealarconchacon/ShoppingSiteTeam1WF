@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css']
+  selector: 'app-cookie-policy',
+  templateUrl: './cookie-policy.component.html',
+  styleUrls: ['./cookie-policy.component.css']
 })
-export class AboutUsComponent implements OnInit{
+export class CookiePolicyComponent implements OnInit{
 
   constructor(){}
 
@@ -20,3 +20,4 @@ export class AboutUsComponent implements OnInit{
     }
   }
 }
+

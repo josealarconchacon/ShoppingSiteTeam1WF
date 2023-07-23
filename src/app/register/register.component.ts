@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../user.service';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'; // Import HttpHeaders
+import { UserService } from '../user.service'; // Import the Angular service for API calls
 
 @Component({
   selector: 'app-register',
@@ -9,30 +10,44 @@ import { UserService } from '../user.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
+  serverEndpoint = 'http://localhost:3000/Register'; // Replace with your server's actual API endpoint URL
 
-  constructor(public fb: FormBuilder, private service: UserService) {
-    this.registerForm = this.fb.group({
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private userService: UserService) {}
+
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
       username: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
     });
-  }
 
-  ngOnInit(): void {}
+  }
 
   onSubmit() {
     if (this.registerForm.valid) {
-      this.service.AddRegisterUser(this.registerForm.value).subscribe(
+      const formData = this.registerForm.value;
+
+      this.userService.registerUser(formData).subscribe(
         (response) => {
-          alert('Registration successful');
-          console.log(response);
+          console.log('Form submission successful:', response);
+          // Handle success, e.g., show a success message or navigate to a different page
         },
-        (error) => {
-          console.error('Registration failed:', error);
-          // Handle registration error, e.g., show an error message to the user
+        (error: HttpErrorResponse) => {
+          console.error('Form submission error:', error);
+          if (error.status === 409) {
+            // Handle the case when the username already exists
+            console.error('Username already exists:', error.message);
+            // Show an error message to the user
+          } else {
+            // Handle other errors, e.g., show a generic error message
+            console.error('An error occurred during form submission:', error.message);
+            // Show a generic error message to the user
+          }
         }
       );
+    } else {
+      // Handle invalid form submission, e.g., show error messages
     }
   }
 }

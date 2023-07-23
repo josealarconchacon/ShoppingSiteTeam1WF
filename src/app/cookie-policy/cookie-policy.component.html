@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>Last updated: July 23, 2023
+
+            Welcome to StreamCinema!
+            
+            This Cookie Policy explains what cookies are, how we use them, your choices regarding cookies, and further information about cookies. </p>
+        <h1>StreamCinema Cookie Policy</h1>
+
+        <div class="faq" id="f1" (click)="accordion('f1')">
+            <button class="dropdown">
+                What are cookies?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f1'">
+                <p>
+                    Cookies are small pieces of text stored on your device (computer, tablet, or mobile) when you are on the Internet, including on StreamCinema's website.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq" id="f2" (click)="accordion('f2')">
+            <button class="dropdown">
+                How does StreamCinema use cookies?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f2'">
+                <p>
+                    We use cookies to understand how you use our site, improve your experience, and personalize content. In general, the cookies on our site are used for the following purposes:<br><br>
+
+                    Authentication: If you're signed in to StreamCinema, cookies help us show you the right information and personalize your experience.<br>
+                    Security: We use cookies to enable and support security features, and to help us detect malicious activity.<br>
+                    Preferences, features, and services: Cookies can help you fill out forms on StreamCinema. They also provide you with features, insights, and customized content.<br>
+                    Marketing: We may use cookies to help us deliver marketing campaigns and track their performance.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="dropdown"  id="f3" (click)="accordion('f3')">
+                What are your choices regarding cookies?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f3'">
+                <p>
+                    Most web browsers are set to accept cookies by default. However, you can choose to set your browser to remove or reject cookies. Please note that if you choose to remove or reject cookies, this could affect the availability and functionality of StreamCinema.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

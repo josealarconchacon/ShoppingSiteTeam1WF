@@ -5,7 +5,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import {  ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
@@ -17,6 +17,13 @@ import { ReturnAndRefundsComponent } from './return-and-refunds/return-and-refun
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { UserService } from './user.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { LegalNotesComponent } from './legal-notes/legal-notes.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { CareersComponent } from './careers/careers.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +38,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactUsComponent,
     FAQsComponent,
     ReturnAndRefundsComponent,
+    
     TermsAndConditionsComponent,
+    LegalNotesComponent,
+    PrivacyPolicyComponent,
+    CookiePolicyComponent,
+    CareersComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,10 +52,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
+    
    // FooterComponent,
     //ContactUsComponent
   ],
-  providers: [UserService],
+  providers: [UserService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

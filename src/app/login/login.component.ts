@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; // Import HttpClient
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'; // Import HttpHeaders
 import { UserService } from '../user.service';
 
 @Component({
@@ -11,32 +11,25 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(public fb: FormBuilder, private service: UserService) {
+  constructor(public fb: FormBuilder, private service: UserService, private http: HttpClient) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
-  // constructor(
-  //   private formBuilder: FormBuilder,
-  //   private http: HttpClient // Inject HttpClient
-  // ) {}
 
   ngOnInit(): void {}
-  // ngOnInit(): void {
-  //   this.loginForm = this.formBuilder.group({
-  //     username: ['', Validators.required],
-  //     password: ['', Validators.required],
-  //   });
-  // }
-
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.service.AddloginUser(this.loginForm.value).subscribe(
+      const loginData = this.loginForm.value;
+
+      // Make a POST request to the backend API for login
+      this.http.post('http://localhost:3000/Login', loginData).subscribe(
         (response) => {
           alert('Login successful');
           console.log(response);
+          // Handle successful login, e.g., store JWT token and navigate to a protected page
         },
         (error) => {
           console.error('Login failed:', error);
@@ -45,24 +38,4 @@ export class LoginComponent implements OnInit {
       );
     }
   }
-  
-  // onSubmit() {
-  //   if (this.loginForm.valid) {
-  //     const loginData = this.loginForm.value;
-
-  //     // Make a POST request to the backend API for login
-  //     this.http.post('http://localhost:3000/api/login', loginData).subscribe(
-  //       (response) => {
-  //         console.log('Login successful:', response);
-  //         // Handle successful login, e.g., store JWT token and navigate to a protected page
-  //       },
-  //       (error) => {
-  //         console.error('Login failed:', error);
-  //         // Handle login error, e.g., show an error message to the user
-  //       }
-  //     );
-  //   }
-  // }
-
-
 }
