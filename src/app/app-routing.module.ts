@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { DetailComponent } from './detail/detail.component';
-import { HomeComponent } from './home/home.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -19,6 +18,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { CareersComponent } from './careers/careers.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HomeComponent } from './home/home.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
@@ -26,7 +26,6 @@ const routers: Routes = [
   { path: 'collections', component: CollectionsComponent },
   { path: 'detail', component: DetailComponent },
   { path: 'nav-bar', component: NavBarComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'user-page', component: UserPageComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'contact-us', component: ContactUsComponent },
@@ -38,7 +37,7 @@ const routers: Routes = [
   { path: 'cookie-policy', component: CookiePolicyComponent},
   { path: 'careers', component: CareersComponent},
   { path: 'about-us', component: AboutUsComponent},
-  
+  {path: 'home', component: HomeComponent }
 
 ];
 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'; // Import HttpHeaders
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(public fb: FormBuilder, private service: UserService, private http: HttpClient) {
+  constructor(public fb: FormBuilder, private service: UserService, private http: HttpClient, private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -30,6 +31,7 @@ export class LoginComponent implements OnInit {
           alert('Login successful');
           console.log(response);
           // Handle successful login, e.g., store JWT token and navigate to a protected page
+          this.router.navigate(['/home']);  // Navigate to home page
         },
         (error) => {
           console.error('Login failed:', error);

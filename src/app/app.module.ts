@@ -23,6 +23,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { CareersComponent } from './careers/careers.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     CookiePolicyComponent,
     CareersComponent,
     AboutUsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+
     
     
    // FooterComponent,
