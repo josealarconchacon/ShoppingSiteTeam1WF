@@ -1,13 +1,7 @@
-import {
-  Component,
-  OnInit,
-  OnChanges,
-  Input,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { MovieService } from '../service/movie.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-view-all',
@@ -24,8 +18,7 @@ export class ViewAllComponent implements OnInit, OnChanges {
   constructor(
     private http: HttpClient,
     private movieService: MovieService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {

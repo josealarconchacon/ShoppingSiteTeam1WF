@@ -1,8 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { MovieService } from '../service/movie.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -10,10 +7,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  constructor(
-    private readonly movieService: MovieService,
-    private http: HttpClient
-  ) {}
+  // properties
+  movieTitle: string;
+  searchResults: any[];
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
+
+  // search movie method
+  searchMovies() {
+    const apiKey = '55db4e09';
+    const apiUrl = `http://www.omdbapi.com/?s=${this.movieTitle}&apikey=${apiKey}`;
+    this.http.get(apiUrl).subscribe((data: any) => {
+      this.searchResults = data.Search;
+    });
+  }
 }

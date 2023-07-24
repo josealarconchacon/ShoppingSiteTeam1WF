@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  // get movie method from API
+  // get all movie
   getMovies(): Observable<any> {
     const options = {
       headers: {
@@ -20,5 +20,11 @@ export class MovieService {
       },
     };
     return this.http.get<any>(this.apiUrl, options);
+  }
+
+  getMovieDetails(movieId: string): Observable<any> {
+    const apiKey = '55db4e09'; // Replace with your actual API key
+    const url = `http://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`;
+    return this.http.get(url);
   }
 }

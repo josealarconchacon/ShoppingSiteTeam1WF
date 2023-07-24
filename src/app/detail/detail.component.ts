@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MovieService } from '../service/movie.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css'],
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnChanges {
+  // properties
   movieId: string;
   movieData: any;
 
@@ -19,8 +19,7 @@ export class DetailComponent implements OnInit {
       (params) => {
         this.movieId = params['id'];
         this.fetchMovieData(this.movieId);
-        console.log(`Movie ID: ${this.movieId}`);
-        console.log(`Movie Data: ${this.movieData}`);
+        // console.log(`Movie ID: ${this.movieId}`);
       },
       (error) => {
         console.log(`Error getting data: ${error}`);
@@ -28,6 +27,9 @@ export class DetailComponent implements OnInit {
     );
   }
 
+  ngOnChanges(): void {}
+
+  // fetch movie by id
   fetchMovieData(movieID: string) {
     const apiKey = '809f52d640msh8ba44e260d0fe3ap1b72f0jsnadbfe7ffcafb';
     const url = `https://imdb-top-100-movies.p.rapidapi.com/${movieID}`;
