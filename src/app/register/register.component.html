@@ -15,43 +15,86 @@
       <h4>Please fill in the information below:</h4>
       <br />
       <div class="form-style">
-        <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
-          <!-- Username -->
+        <form>
+          <!-- First Name -->
           <div class="form-group pb-3">
-            <label for="username">Username</label>
+            <label for="firstName">First Name</label>
             <input
               class="form-control"
-              formControlName="username"
               type="text"
+              [(ngModel)]="firstName" 
+              [ngModelOptions]="{standalone: true}" 
+              id="firstName" 
+              placeholder="Enter First Name"
             />
           </div>
+          <!-- Last Name -->
+          <div class="form-group pb-3">
+            <label for="lastName">Last Name</label>
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="lastName" 
+              [ngModelOptions]="{standalone: true}" 
+              id="lastName" 
+              placeholder="Enter Last Name"
+            />
+          </div>
+            <!-- Email -->
+            <div class="form-group pb-3">
+              <label for="email">Email</label>
+              <input type="text" 
+                [(ngModel)]="email" 
+                [ngModelOptions]="{standalone: true}"  
+                class="form-control" 
+                id="email" 
+                placeholder="Enter Email">
+            </div>
           <!-- Password -->
           <div class="form-group pb-3">
             <label for="password">Password</label>
-            <input
-              class="form-control"
-              formControlName="password"
-              type="password"
-              name=""
-              id=""
-            />
+            <input type="password" 
+              [(ngModel)]="password" 
+              [ngModelOptions]="{standalone: true}" 
+              class="form-control" 
+              id="password" 
+              placeholder="Enter Password">
           </div>
           <!-- Confirm Password -->
           <div class="form-group pb-3">
             <label for="confirmPassword">Confirm Password</label>
-            <input
-              class="form-control"
-              formControlName="confirmPassword"
-              type="confirmPassword"
-              name=""
-              id=""
-            />
+            <input type="password" 
+              [(ngModel)]="confirmPassword" 
+              [ngModelOptions]="{standalone: true}" 
+              class="form-control" 
+              id="confirmPassword" 
+              placeholder="Confirm Password">
+          </div>
+          <!-- Address -->
+          <div class="form-group pb-3">
+            <label for="address">Address</label>
+            <input type="address" 
+              [(ngModel)]="address" 
+              [ngModelOptions]="{standalone: true}" 
+              class="form-control" 
+              id="address" 
+              placeholder="Enter Address">
+          </div>
+          <!-- Phone Number -->
+          <div class="form-group pb-3">
+            <label for="phone">Phone Number</label>
+            <input type="text" 
+              [(ngModel)]="phone" 
+              [ngModelOptions]="{standalone: true}" 
+              class="form-control" 
+              id="phone" 
+              placeholder="Enter Mobile">
           </div>
           <div class="pb-2">
             <button
-              [disabled]="!registerForm.valid"
               type="button"
               class="btn btn-dark w-100 font-weight-bold mt-2"
+              (click)="register()"
             >
               Register
             </button>

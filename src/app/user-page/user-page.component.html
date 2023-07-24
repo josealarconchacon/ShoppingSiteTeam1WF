@@ -1,14 +1,19 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-item">
-            <h2>Welcome Username</h2>
-            <ul>
-            </ul>
+            <div>
+            <h2>Welcome {{ userData.firstName }} {{ userData.lastName }}</h2>
+            <h3>Info:</h3>
+            <p><strong>Email:</strong> {{ userData.email }}</p>
+            <p><strong>Address:</strong> {{ userData.address }}</p>
+            <p><strong>Phone:</strong> {{ userData.phone }}</p>
+            <button (click)="logout()">Logout</button>
+            </div>
         </div>
     </div>
 </div>
 <div class="favorite">
-<h1 class="favorite-color">Favorites</h1>
+<h1 class="favorite-color">Here are some of your favorite movies</h1>
 </div>
 <section class="blog-area blog-area-two pt-100 pb-70">
     
