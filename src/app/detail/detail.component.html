@@ -1,3 +1,8 @@
+<!-- Font Awesome Icon Library -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <div class="card-wrapper">
   <div class="card">
     <!-- card left -->
@@ -14,22 +19,18 @@
       </div>
       <h2 class="movie-title">{{ movieData.title }}</h2>
       <div class="movie-rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star-half-alt"></i>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star-half-full"></span>
 
-        <span>{{ movieData.rating }}</span>
+        <span class="rating-num">{{ movieData.rating }}</span>
       </div>
 
       <div class="movie-detail">
         <h2>Movie Description:</h2>
         <p>{{ movieData.description }}</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-          perferendis eius. Dignissimos, labore suscipit. Unde.
-        </p>
         <ul>
           <li>
             Director: <span>{{ movieData.director }}</span>
