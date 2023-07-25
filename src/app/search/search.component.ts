@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MovieService } from '../service/movie.service';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
   movieTitle: string;
   searchResults: any[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private movieService: MovieService) {}
 
   ngOnInit(): void {}
 
@@ -23,4 +24,5 @@ export class SearchComponent implements OnInit {
       this.searchResults = data.Search;
     });
   }
+  // ---------------
 }
