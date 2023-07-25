@@ -1,0 +1,59 @@
+<!-- Font Awesome Icon Library -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="card-wrapper">
+  <div class="card">
+    <!-- card left -->
+    <div class="movie-imgs">
+      <div class="img-display">
+        <div class="img-showcase">
+          <img src="{{ movieData.image }}" alt="shoe image" />
+        </div>
+      </div>
+    </div>
+    <div class="movie-content">
+      <div class="back-button">
+        <a routerLink="/viewAll" href="#" class="label">View All</a>
+      </div>
+      <h2 class="movie-title">{{ movieData.title }}</h2>
+      <div class="movie-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star-half-full"></span>
+
+        <span class="rating-num">{{ movieData.rating }}</span>
+      </div>
+
+      <div class="movie-detail">
+        <h2>Movie Description:</h2>
+        <p>{{ movieData.description }}</p>
+        <ul>
+          <li>
+            Director: <span>{{ movieData.director }}</span>
+          </li>
+          <li>
+            Genre: <span>{{ movieData.genre }}</span>
+          </li>
+          <li>
+            Rank: <span>{{ movieData.rank }}</span>
+          </li>
+          <li>
+            Year Relized: <span>{{ movieData.year }}</span>
+          </li>
+          <li>
+            Writers: <span>{{ movieData.writers }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="category-btn">
+        <button class="on-hover" type="button">View Triller</button>
+        <button class="on-hover" type="button">Save</button>
+      </div>
+    </div>
+  </div>
+  <!-- trailer  -->
+</div>

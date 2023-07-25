@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>Hello there, You are in </p>
+        <h1>Ferquently Asked Questions site</h1>
+
+        <div class="faq" id="f1" (click)="accordion('f1')">
+            <button class="dropdown">
+             How do I place an order?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f1'">
+                <p>
+                    Browse the website and add items to your shopping cart. Proceed to checkout and provide the necessary information, including shipping address and payment details.
+                    Review your order and confirm the purchase.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq" id="f2" (click)="accordion('f2')">
+            <button class="dropdown">
+                What payment methods do you accept?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f2'">
+                <p>
+                    We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options. The available methods will be displayed during the checkout process.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="dropdown"  id="f3" (click)="accordion('f3')">
+                Is my payment information secure?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f3'">
+                <p>
+                    Yes, we take the security of your payment information seriously. We use industry-standard encryption protocols and secure payment gateways to protect your sensitive data.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f4" (click)="accordion('f4')">
+            <button class="dropdown">
+                How can I track my order?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f4'">
+                <p>
+                    Once your order is shipped, you will receive a confirmation email with a tracking number. You can use this number to track the status of your shipment on our website or the courier's website.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f5" (click)="accordion('f5')">
+            <button class="dropdown">
+                How long does shipping take?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f5'">
+                <p>
+                    Shipping times may vary depending on your location and the shipping method chosen. We strive to process and ship orders as quickly as possible. Estimated delivery times will be provided during the checkout process.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f6" (click)="accordion('f6')">
+            <button class="dropdown">
+                Do you offer international shipping?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f6'">
+                <p>
+                    Yes, we offer international shipping to many countries. During the checkout process, you can select your country for shipping. Please note that additional customs duties or taxes may apply, which are the responsibility of the buyer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="home-image-container">
+<img [src]="homeImage" alt="Male Fashion Model" class="home">
+</div>
+<div class="collections">
+    <div class="summer-collection-container">
+        <button><a (click)="navigateToCollections()" routerLink="'collections'">
+            <img [src]="summerCollection" alt="" class="summer-collection">
+          </a></button>
+    </div>
+    <div class="pants-collection-container">
+        <button><a (click)="navigateToCollections()" routerLink="'collections'">
+            <img [src]="pantsCollection" alt="" class="pants-collection">
+          </a></button>
+    </div>
+</div>
+<div class="shoes-container">
+    <button><a (click)="navigateToCollections()" routerLink="'collections'">
+        <img [src]="shoesCollection" alt="" class="shoes-collection">
+      </a></button>
+</div>
+    
