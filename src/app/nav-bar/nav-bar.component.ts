@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../service/movie.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-nav-bar',

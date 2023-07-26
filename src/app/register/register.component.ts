@@ -1,23 +1,54 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
-export class RegisterComponent implements OnInit {
-  registerForm: FormGroup;
+export class RegisterComponent {
+  firstName: string = '';
+  lastName: string = '';
+  email: string = '';
+  password: string = '';
+  confirmPassword: string = '';
+  address: string = '';
+  phone: string = ''; 
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    // initialize variable to equal new FormGroup
-    this.registerForm = new FormGroup({
-      username: new FormGroup('', [Validators.required]),
-      password: new FormGroup('', [Validators.required]),
-    });
+  register() 
+  {
+
+    if (this.password !== this.confirmPassword) {
+      alert("Password and Confirm Password do not match.");
+      return;
+    }
+
+    let bodyData = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      password: this.password,
+      address: this.address,
+      phone: this.phone
+    };
+    this.http.post("http://localhost:8086/user/create", bodyData, { responseType: 'text' }).subscribe(
+      (resultData: any) => {
+        console.log(resultData);
+        alert("Registered Successfully");
+
+        this.firstName = '';
+        this.lastName = '';
+        this.email = '';
+        this.password = '';
+        this.confirmPassword = '';
+        this.address = '';
+        this.phone = '';
+      },
+      (error) => {
+        console.error('Error registering user:', error);
+      }
+    );
   }
-
-  onSubmit() {}
 }

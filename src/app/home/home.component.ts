@@ -13,14 +13,17 @@ export class HomeComponent implements OnInit{
 
   constructor(private router: Router) { }
 
-  navigateToCollections() {
-    this.router.navigate(['/collections']);
+  navigateToCollections(genre: string): void {
+    this.router.navigate(['/collections', genre]);
   }
   
   homeImage: string = "./assets/home.jpg";
-  summerCollection: string = "./assets/summer-collection.jpg";
-  pantsCollection: string = "./assets/pants-collection.jpg";
-  shoesCollection: string = "./assets/shoes-collection.jpg";
+  actionCollection: string = "./assets/action-collection.jpg";
+  comedyCollection: string = "./assets/comedy-collection.jpg";
+  dramaCollection: string = "./assets/drama-collection.jpg";
+  allCollection: string = "./assets/all-collection.jpg";
 
-  
+  goToGenrePage(genre: string): void {
+    this.router.navigate(['/genre', genre]);
+  }
 }

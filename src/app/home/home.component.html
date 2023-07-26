@@ -1,21 +1,84 @@
-<div class="home-image-container">
-<img [src]="homeImage" alt="Male Fashion Model" class="home">
-</div>
-<div class="collections">
-    <div class="summer-collection-container">
-        <button><a (click)="navigateToCollections()" routerLink="'collections'">
-            <img [src]="summerCollection" alt="" class="summer-collection">
-          </a></button>
+
+<div class="banner-wrap">
+    <div class="banner-slider owl-theme owl-carousel">
+        <div class="banner-area banner-img-one">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="banner-content">
+                        <h1>StreamCinema</h1>
+                        <p>Stream High Quality Movies</p>
+                        <a class="banner-btn" routerLink="register">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
-    <div class="pants-collection-container">
-        <button><a (click)="navigateToCollections()" routerLink="'collections'">
-            <img [src]="pantsCollection" alt="" class="pants-collection">
-          </a></button>
+    --->
+</div>
+
+<section class="work-area">
+    <div class="container-fluid p-0">
+        <div class="section-title">
+            <h2>Movies By Genre</h2>
+        </div>
+
+        <div class="row m-0">
+            <div class="col-sm-6 col-lg-6 p-0">
+                <a routerLink="/collections/Action">
+                    <div class="work-item">
+                        <img src="/assets/action.jpg" alt="Work">
+                        <div class="work-content">
+                            <h3>Action</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-6 p-0">
+                <a routerLink="/collections/Comedy">
+                    <div class="work-item">
+                        <img src="/assets/comedy.jpg" alt="Work">
+                        <div class="work-content">
+                            <h3>Comedy</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-6 p-0">
+                <a routerLink="/collections/Drama">
+                    <div class="work-item">
+                        <img src="/assets/drama.jpg" alt="Work">
+                        <div class="work-content">
+                            <h3>Drama</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-6 p-0">
+                <a routerLink="/collections/Crime">
+                    <div class="work-item">
+                        <img src="/assets/crime.jpg" alt="Work">
+                        <div class="work-content">
+                            <h3>Crime</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
-<div class="shoes-container">
-    <button><a (click)="navigateToCollections()" routerLink="'collections'">
-        <img [src]="shoesCollection" alt="" class="shoes-collection">
-      </a></button>
-</div>
-    
+</section>

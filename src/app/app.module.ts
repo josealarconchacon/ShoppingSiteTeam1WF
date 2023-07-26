@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { DetailComponent } from './detail/detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HomeComponent } from './home/home.component';
 import { ViewAllComponent } from './view-all/view-all.component';
 import { SearchComponent } from './search/search.component';
 import { SearcherComponent } from './partials/searcher/searcher.component';
@@ -30,7 +31,6 @@ import { ResultsComponent } from './movies/results/results.component';
     CollectionsComponent,
     DetailComponent,
     ShoppingCartComponent,
-
     FooterComponent,
     ContactUsComponent,
     FAQsComponent,
@@ -47,8 +47,6 @@ import { ResultsComponent } from './movies/results/results.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    //FooterComponent,
-    //ContactUsComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
