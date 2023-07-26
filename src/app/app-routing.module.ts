@@ -13,7 +13,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { ViewAllComponent } from './view-all/view-all.component';
-import { SearchComponent } from './search/search.component';
+// import { SearchComponent } from './search/search.component';
 import { SearcherComponent } from './partials/searcher/searcher.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
