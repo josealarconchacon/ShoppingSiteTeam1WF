@@ -10,6 +10,7 @@ var createUserControllerFn = async (req, res) =>  {
       userModelData.password = body.password;
       userModelData.address = body.address;
       userModelData.phone = body.phone;
+      
 
       await userModelData.save();
       console.log(userModelData);
@@ -86,4 +87,4 @@ var logoutControllerFn = async (req, res) => {
 };
 
 // Export the userController object with all functions
-module.exports = { createUserControllerFn, loginControllerFn, getUserControllerFn, logoutControllerFn };
+module.exports = { createUserControllerFn, loginControllerFn, getUserControllerFn, logoutControllerFn};

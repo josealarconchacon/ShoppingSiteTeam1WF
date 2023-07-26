@@ -43,7 +43,6 @@ app.post('/user/login', userController.loginControllerFn); // Use the userContro
 app.get('/user/user', userController.getUserControllerFn); // Get the userControler for user account
 app.post('/user/logout', userController.logoutControllerFn); // Get the userControler for user logout
 
-
 // Start the server
 const PORT = process.env.PORT || 8086;
 app.listen(PORT, () => {

@@ -2,9 +2,10 @@
   <h2>Search for what you love</h2>
   <h6>See all {{ genre }} Movies</h6>
 </div>
+
 <div class="collection" *ngIf="movies.length > 0">
   <div href="#" class="card" *ngFor="let movie of movies">
-    <a routerLink="details" href="">
+    <a [routerLink]="['/details', movie.id]" href="">
       <div class="content">
         <span class="title">{{ movie.title }}</span>
         <span class="category">Realized In: {{movie.year}} </span>
