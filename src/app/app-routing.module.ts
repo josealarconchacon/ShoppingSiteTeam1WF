@@ -37,8 +37,8 @@ const routers: Routes = [
   { path: 'cookie-policy', component: CookiePolicyComponent},
   { path: 'careers', component: CareersComponent},
   { path: 'about-us', component: AboutUsComponent},
-  {path: 'home', component: HomeComponent }
-
+  {path: 'home', component: HomeComponent },
+  {path: '', component: HomeComponent }
 ];
 
 @NgModule({

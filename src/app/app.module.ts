@@ -39,7 +39,6 @@ import { HomeComponent } from './home/home.component';
     ContactUsComponent,
     FAQsComponent,
     ReturnAndRefundsComponent,
-    
     TermsAndConditionsComponent,
     LegalNotesComponent,
     PrivacyPolicyComponent,
