@@ -20,9 +20,6 @@ export class MovieComponent implements OnInit {
   movie: Movie = new Movie();
   name: string = '';
 
-  // nwe test
-  movieTrailerUrl: string;
-
   ngOnInit(): void {
     this.get_movie_detail_byID();
   }
@@ -54,18 +51,5 @@ export class MovieComponent implements OnInit {
   // get list of actors from api
   get_actors(actor: string) {
     return actor.split(',');
-  }
-
-  // new test
-  get_movie_trailer(imdbID: string) {
-    const omdb_api_key: string = '55db4e09';
-    const base_url: string = 'http://www.omdbapi.com/';
-    this.http
-      .get(`http://www.omdbapi.com/?i=${imdbID}&apikey=${omdb_api_key}`)
-      .subscribe((data: any) => {
-        this.movieTrailerUrl = data?.Trailer
-          ? data.Trailer
-          : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-      });
   }
 }
