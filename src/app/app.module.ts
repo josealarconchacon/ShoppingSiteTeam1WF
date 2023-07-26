@@ -6,7 +6,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import {  ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +16,10 @@ import { DetailComponent } from './detail/detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ViewAllComponent } from './view-all/view-all.component';
 import { SearchComponent } from './search/search.component';
+import { SearcherComponent } from './partials/searcher/searcher.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
+import { ResultsComponent } from './movies/results/results.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { SearchComponent } from './search/search.component';
     ContactUsComponent,
     FAQsComponent,
     ViewAllComponent,
-    SearchComponent
+    SearchComponent,
+    SearcherComponent,
+    MoviesComponent,
+    MovieComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,

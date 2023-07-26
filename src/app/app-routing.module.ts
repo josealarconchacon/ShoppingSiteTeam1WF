@@ -13,12 +13,21 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { ViewAllComponent } from './view-all/view-all.component';
-import { SearchComponent } from './search/search.component';
+// import { SearchComponent } from './search/search.component';
+import { SearcherComponent } from './partials/searcher/searcher.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
+import { ResultsComponent } from './movies/results/results.component';
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'viewAll', component: ViewAllComponent },
-  { path: 'search', component: SearchComponent },
+  {
+    path: 'movies',
+    component: MoviesComponent,
+    children: [{ path: ':name', component: ResultsComponent }],
+  },
+  { path: 'movies/:name/:id', component: MovieComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'collections', component: CollectionsComponent },
   { path: 'details/:id', component: DetailComponent },

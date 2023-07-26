@@ -1,0 +1,113 @@
+<!-- Font Awesome Icon Library -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="card-wrapper">
+  <div class="card">
+    <!-- card left -->
+    <div class="movie-imgs">
+      <div class="img-display">
+        <div class="img-showcase">
+          <img [src]="movie.Poster" alt="movie image" />
+        </div>
+      </div>
+    </div>
+    <div class="movie-content">
+      <div class="back-button">
+        <a (click)="back_to_movie()" href="#" class="label">Back</a>
+      </div>
+      <h2 class="movie-title">{{ name }}</h2>
+      <p *ngFor="let rating of movie.Ratings">
+        <span>
+          <img
+            [src]="get_movie_rating_source(rating.Source)"
+            style="max-height: 16px; margin: 5px"
+            alt=""
+          />
+        </span>
+        <span style="color: aliceblue; margin-left: 5px">{{
+          rating.Value
+        }}</span>
+      </p>
+      <hr />
+      <div class="movie-detail">
+        <ul>
+          <li>
+            Director: <span>{{ movie.Director }}</span>
+          </li>
+          <li>
+            Genre: <span> {{ movie.Genre }}</span>
+          </li>
+          <li>
+            Rated: <span> {{ movie.Rated }}</span>
+          </li>
+          <li>
+            Runtime: <span>{{ movie.Runtime }}</span>
+          </li>
+          <li>
+            IMDB Votes: <span>{{ movie.imdbVotes }}</span>
+          </li>
+          <li>
+            Year Relized: <span>{{ movie.Year }}</span>
+          </li>
+          <li>
+            Writers: <span>{{ movie.Writer }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="category-btn">
+        <button class="on-hover" type="button">View Triller</button>
+        <button class="on-hover" type="button">Save</button>
+      </div>
+    </div>
+  </div>
+  <!-- more details  -->
+</div>
+
+<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked" />
+  <label for="tabone">Resumen</label>
+  <div class="tab">
+    <p>
+      {{ movie.Plot }}
+    </p>
+  </div>
+  <input type="radio" name="tabs" id="tabtwo" />
+  <label for="tabtwo">Director</label>
+  <div class="tab">
+    <img
+      src="../../../assets/icons8-school-director-64.png"
+      class="mr-3"
+      style="max-height: 60px; color: aliceblue"
+      alt=""
+    />
+    <p>{{ movie.Director }}</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabthree" />
+  <label for="tabthree">Cast</label>
+  <div class="tab">
+    <div *ngIf="movie?.Actors">
+      <div *ngFor="let cast of get_actors(movie?.Actors)">
+        <div class="card-user">
+          <img src="../../../assets/icons8-actor-48.png" alt="" />
+          <p class="text-uppercase">{{ cast }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="radio" name="tabs" id="tabtfour" />
+  <label for="tabtfour">More Info</label>
+  <div class="tab">
+    <ul>
+      <li>DVD : {{ movie.DVD }}</li>
+      <li>Production : {{ movie.Production }}</li>
+      <li>Language : {{ movie.Language }}</li>
+      <li>Metascore : {{ movie.Metascore }}</li>
+      <li>BoxOffice: {{ movie.BoxOffice }}</li>
+      <li>Country : {{ movie.Country }}</li>
+      <li>Awards: {{ movie.Awards }}</li>
+    </ul>
+  </div>
+</div>
