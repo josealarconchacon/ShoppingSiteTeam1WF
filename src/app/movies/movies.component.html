@@ -4,3 +4,23 @@
     (movieSelected)="onMovieSelected($event)"
   ></app-searcher>
 </div>
+<br />
+<br />
+<router-outlet></router-outlet>
+<!-- <div class="collection">
+  <div *ngFor="let movie of movies" href="#" class="card">
+    <div>
+      <a [routerLink]="['details', movie.imdbID]" href="">
+        <div class="content">
+          <span style="text-align: center" class="title">{{
+            movie.Title
+          }}</span>
+          <span class="category">Realized In: {{ movie.Year }}</span>
+        </div>
+        <div class="image">
+          <img [src]="movie.Poster" alt="" />
+        </div>
+      </a>
+    </div>
+  </div>
+</div> -->

@@ -1,5 +1,5 @@
 <br />
-<div class="wrapper">
+<!-- <div class="wrapper">
   <input [(ngModel)]="movieTitle" placeholder="Search movies by title..." />
   <button (click)="searchMovies()">Search</button>
 </div>
@@ -19,6 +19,28 @@
           <img src="{{ movie.Poster }} " alt="" />
         </div>
       </a>
+    </div>
+  </div>
+</div> -->
+
+<div class="wrapper">
+  <input placeholder="Search movies by title..." />
+  <button>Search</button>
+</div>
+<br />
+<br />
+<div class="collection">
+  <div href="#" class="card">
+    <div>
+      <!-- <a [routerLink]="['/details', movie.imdbID]" href=""> -->
+      <div class="content">
+        <span style="text-align: center" class="title"></span>
+        <span class="category">Realized In: </span>
+      </div>
+      <div class="image">
+        <!-- <img src="" alt="" /> -->
+      </div>
+      <!-- </a> -->
     </div>
   </div>
 </div>
