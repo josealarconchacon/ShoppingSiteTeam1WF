@@ -51,9 +51,4 @@ export class MovieComponent implements OnInit {
   get_actors(actor: string) {
     return actor.split(',');
   }
-
-  // go back to search movie
-  back_to_movie() {
-    this.router.navigate(['../'], { relativeTo: this.activeRoute });
-  }
 }
