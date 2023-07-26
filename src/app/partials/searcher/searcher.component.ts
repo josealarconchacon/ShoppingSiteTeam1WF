@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./searcher.component.css'],
 })
 export class SearcherComponent implements OnInit {
+  
   // properties
   @Output() movieSelected = new EventEmitter<string>();
   @Input() placeholder: string;

@@ -231,3 +231,52 @@ hr {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.modal {
+  width: 50%;
+}
+.modal-header {
+  background-color: #202224;
+  color: #e6e6fa;
+  height: 75px;
+}
+
+.modal-body {
+  background-color: #202224;
+}
+.modal-footer {
+  background-color: #202224;
+  height: 75px;
+}
+
+.img-btn img {
+  margin: auto;
+
+  width: 20%;
+  height: 20%;
+  border-radius: 15%;
+  border: 0.1px solid rgb(124, 124, 124);
+  padding: 1px;
+  margin: 10px;
+}
+.img-btn > a > img {
+  cursor: pointer;
+  border: 5px solid transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 45em) {
+  .img-btn img {
+    margin: auto;
+    width: 45%;
+    height: 45%;
+    border-radius: 15%;
+    border: 0.1px solid rgb(124, 124, 124);
+    padding: 1px;
+  }
+}
+
+.card-wrapper {
+  justify-content: center;
+}
