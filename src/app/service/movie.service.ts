@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { MovieComponent } from '../movies/movie/movie.component';
 
 @Injectable({
   providedIn: 'root',
@@ -39,5 +40,21 @@ export class MovieService {
       .get(`${this.base_url}?apikey=${this.omdb_api_key}&i=${id}`)
       .toPromise();
     return movie_id;
+  }
+
+  saveMovieToUserFavorites(userEmail: string, title: string, year: string, description: string, image: string) {
+    const url = 'http://localhost:8086/save/save';
+    
+    // Include the userEmail, title, year, and description in the request body
+    const body = {
+      userEmail: userEmail,
+      title: title,
+      year: year,
+      description: description,
+      image: image
+    };
+
+    // Send a POST request to the API endpoint to save the movie data
+    return this.http.post<any>(url, body);
   }
 }

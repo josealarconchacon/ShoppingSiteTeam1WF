@@ -21,72 +21,12 @@
         
         <div class="row">
             <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item">
-                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
-                    <div class="blog-bottom">
-                        <span>Movie Date</span>
-                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <div class="blog-item" *ngIf="movies.length > 0">
+                    
+                    <div class="blog-bottom" *ngFor="let movie of movies">
+                        <img [src]="movie.image" alt="Movie Poster">
+                        <span>Year Realized: {{ movie.year }}</span>
+                        <h3><a routerLink="/blog-details"> {{movie.title}} </a></h3>
                         <a class="blog-btn" routerLink="/blog-details">Details Component</a>
                     </div>
                 </div>

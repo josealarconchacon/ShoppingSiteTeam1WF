@@ -5,8 +5,29 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 const routes = require('./routes/routes'); // Import the Router from routes.js
 const cors = require('cors');
+const multer = require('multer');
+
+// multer configuration
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, './uploads/');
+  },
+  filename: function(req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+const upload = multer({ storage: storage });
+
+app.post('/api/upload', upload.single('image'), (req, res) => {
+  console.log(req.body.title); // access the title
+  console.log(req.body.description); // access the description
+  console.log(req.file); // access the image file
+  // after you've processed the data you can send a response back to the client
+  res.json({ message: 'Data received' });
+});
 
 const userController = require('./src/user/userController.js');
+const movieController = require('./src/user/movieController.js');
 
 mongoose.connect("mongodb://127.0.0.1:27017/StreamCinema", {
   useUnifiedTopology: true,
@@ -24,7 +45,7 @@ app.use(cors(
   }
 ));
 app.use('/user', routes); // Use the Router with the /api prefix
-
+app.use('/save', routes); // Use the Router with the /api prefix
 app.use(express.json());
 
 // Add this line before defining any routes
@@ -42,6 +63,8 @@ app.post('/user/create', userController.createUserControllerFn); // Use the user
 app.post('/user/login', userController.loginControllerFn); // Use the userController for user login
 app.get('/user/user', userController.getUserControllerFn); // Get the userControler for user account
 app.post('/user/logout', userController.logoutControllerFn); // Get the userControler for user logout
+app.post('/save/save', movieController.createSaveControllerFn); // Get the userControler for user logout
+app.get('/save/save', movieController.getSaveControllerFn); // Get the userControler for user logout
 
 // Start the server
 const PORT = process.env.PORT || 8086;

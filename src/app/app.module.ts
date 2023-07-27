@@ -21,10 +21,12 @@ import { SearcherComponent } from './partials/searcher/searcher.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { ResultsComponent } from './movies/results/results.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     NavBarComponent,
     LoginComponent,
     RegisterComponent,
@@ -40,6 +42,7 @@ import { ResultsComponent } from './movies/results/results.component';
     MoviesComponent,
     MovieComponent,
     ResultsComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,

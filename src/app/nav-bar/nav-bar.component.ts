@@ -14,4 +14,6 @@ export class NavBarComponent implements OnInit {
   constructor(private movieService: MovieService, private http: HttpClient) {}
 
   ngOnInit() {}
+
+  
 }

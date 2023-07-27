@@ -9,6 +9,7 @@
       <div class="content">
         <span class="title">{{ movie.title }}</span>
         <span class="category">Realized In: {{movie.year}} </span>
+        <button (click)="saveMovieToFavorites(movie)">Save</button>
       </div>
       <div class="image">
         <img [src]="movie.image" alt="Movie Poster">

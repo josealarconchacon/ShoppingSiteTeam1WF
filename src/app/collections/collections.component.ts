@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../service/movie.service';
 
 @Component({
   selector: 'app-collections',
@@ -11,10 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 export class CollectionsComponent {
   genre: string = '';
   movies: any[] = [];
+  email: string = '';
 
   constructor(
     private route: ActivatedRoute,
-    private http: HttpClient
+    private http: HttpClient,
+    public movieService: MovieService
   ) {}
   
   ngOnInit(): void {
@@ -44,6 +47,32 @@ export class CollectionsComponent {
     }
   );
   }
+  saveMovieToFavorites(movieData: any): void {
+    const title = movieData.title;
+    const year = movieData.year;
+    const description = movieData.description;
+    const image = movieData.image;
+
+    console.log(title);
+    // Fetch the user's email from localStorage
+   const userEmail = localStorage.getItem('userEmail');
+
+   if (userEmail) {
+
+     // Call the saveMovieToUserFavorites method from the MovieService
+     this.movieService.saveMovieToUserFavorites(userEmail, title, year, description, image).subscribe(
+       (response) => {
+        console.log(title);
+         console.log('Movie saved to favorites:', response);
+         // Handle success, e.g., display a success message to the user
+       },
+       (error) => {
+         console.error('Error saving movie to favorites:', error);
+         // Handle error, e.g., display an error message to the user
+       }
+     );
+   } else {
+     console.error('User email not found in localStorage.');
+      }
+  }
 }
-
-
