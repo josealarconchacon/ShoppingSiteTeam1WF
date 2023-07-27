@@ -23,7 +23,7 @@ export class MovieService {
     return this.http.get<any>(this.apiUrl, options);
   }
 
-  // searchMovies() will get a list of movies, it take two params, name and type to
+  // searchMovies() will get a list of movies, it take two params, name and type
   getSearchMovies(name: string, type: string) {
     const search_movie = this.http
       .get(

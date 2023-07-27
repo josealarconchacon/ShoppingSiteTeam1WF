@@ -25,20 +25,6 @@ export class MoviesComponent implements OnInit {
       );
     else {
       this.router.navigate(['/movies', movie]);
-
-      // try {
-      //   const data_req: any = await this.movieService.getSearchMovies(
-      //     movie,
-      //     'movie'
-      //   );
-      //   // if data_req is true, then assign movies array to data_req
-      //   if (data_req.Response == 'True') this.movies = data_req.Search;
-      //   else {
-      //     Swal.fire('Error: Movie not found', data_req.error, 'error');
-      //   }
-      // } catch (error) {
-      //   console.log(error);
-      // }
     }
   }
 }

@@ -54,7 +54,14 @@
         </ul>
       </div>
       <div class="category-btn">
-        <button class="on-hover" type="button">View Triller</button>
+        <button
+          type="button"
+          class="btn btn-primary on-hover"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+        >
+          View Movie
+        </button>
         <button class="on-hover" type="button">Save</button>
       </div>
     </div>
@@ -62,9 +69,90 @@
   <!-- more details  -->
 </div>
 
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Choose Your Streaming Site</h4>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="img-btn">
+          <a
+            class="child"
+            href="https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Netflix_icon.svg/2048px-Netflix_icon.svg.png"
+              alt="Sri Lanka Flag"
+            />
+          </a>
+          <a
+            class="child"
+            href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"
+          >
+            <img
+              src="https://play-lh.googleusercontent.com/lH3MWp-oZRi39j_XcWqKOtnv7fyLNmH35agp_pR-TdjQLkuEP77HK5_yI9KwKIKI4U01"
+              alt="America Flag"
+            />
+          </a>
+          <a class="child" href="https://www.max.com/">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5968/5968668.png"
+              alt="America Flag"
+            />
+          </a>
+          <a
+            class="child"
+            href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-630524469298-c&mttnsubkw=75222244984__idXQ476O_&mttnsubplmnt=0AAAAAC0Rhi1EtIk91TaQf7yFrZaLMXhct"
+          >
+            <img
+              src="https://seeklogo.com/images/A/apple-tv-logo-DC5D65EEFE-seeklogo.com.png"
+              alt="America Flag"
+            />
+          </a>
+          <a
+            class="child"
+            href="https://www.amazon.com/gp/video/primesignup/?ref=dvm_us_dl_sl_go_brsa_mkw_svHxbIxqC-dc&mrntrk=pcrid_448130500925_slid__pgrid_29008589832_pgeo_1022762_x__adext__ptid_kwd-45697133742&gclid=EAIaIQobChMIt_aO0LWtgAMVj9_ICh2G5grCEAAYASAAEgLwovD_BwE"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/413+SVFO39L.png"
+              alt="America Flag"
+            />
+          </a>
+          <a
+            class="child"
+            href="https://www.youtube.com/channel/UCX1nchEcBshItKBeJvH-YMw"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/003/399/771/original/youtube-icon-editorial-free-vector.jpg"
+              alt="America Flag"
+            />
+          </a>
+          <a class="child" href="https://www.disney.com/">
+            <img
+              src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a5a71474-025c-4ffe-b8c1-373c30b8bd6c/dctd7d3-e998b45c-89e6-45de-8f8c-3a3a15813016.png/v1/fill/w_894,h_894/walt_disney_pictures_icon_by_toon1990_dctd7d3-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyOCIsInBhdGgiOiJcL2ZcL2E1YTcxNDc0LTAyNWMtNGZmZS1iOGMxLTM3M2MzMGI4YmQ2Y1wvZGN0ZDdkMy1lOTk4YjQ1Yy04OWU2LTQ1ZGUtOGY4Yy0zYTNhMTU4MTMwMTYucG5nIiwid2lkdGgiOiI8PTE5MjgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.OVdBE7TjNVg4fgveMEARR_FJR_o331IafSyfH4F-T_M"
+              alt="America Flag"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="tabs">
   <input type="radio" name="tabs" id="tabone" checked="checked" />
-  <label for="tabone">Resumen</label>
+  <label for="tabone">Select Your Strem</label>
   <div class="tab">
     <p>
       {{ movie.Plot }}
