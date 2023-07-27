@@ -19,12 +19,17 @@ import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { CareersComponent } from './careers/careers.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { ViewAllComponent } from './view-all/view-all.component';
+
 
 const routers: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'viewAll', component: ViewAllComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'collections', component: CollectionsComponent },
-  { path: 'detail', component: DetailComponent },
+
+  { path: 'collections/:genre', component: CollectionsComponent },
+  { path: 'details/:id', component: DetailComponent },
+
   { path: 'nav-bar', component: NavBarComponent },
   { path: 'user-page', component: UserPageComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
@@ -37,7 +42,7 @@ const routers: Routes = [
   { path: 'cookie-policy', component: CookiePolicyComponent},
   { path: 'careers', component: CareersComponent},
   { path: 'about-us', component: AboutUsComponent},
-  {path: 'home', component: HomeComponent },
+
   {path: '', component: HomeComponent }
 ];
 

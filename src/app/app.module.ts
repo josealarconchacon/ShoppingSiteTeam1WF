@@ -24,7 +24,7 @@ import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { CareersComponent } from './careers/careers.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
-
+import { ViewAllComponent } from './view-all/view-all.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import { HomeComponent } from './home/home.component';
     CookiePolicyComponent,
     CareersComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    ViewAllComponent
   ],
   imports: [
     BrowserModule,

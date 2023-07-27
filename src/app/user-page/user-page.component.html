@@ -1,30 +1,96 @@
-<div class="user">
-    <div class="user-image">
-    <img [src]="userImage" alt="Image Description">
-    </div>
-    <div class="user-name">
-        <h1>User Name</h1>
-    </div>
-</div>
-<div class="center-container">
-<div class="gray-box">
-    <div class="password-container">
-    <a href=""><p class="password">Change Password</p></a>
-</div>
-<div class="address-container">
-    <a href=""><p class="address">Change Address</p></a>
-</div>
-<div class="card-container">
-    <a href=""><p class="card">Change Card Information</p></a>
-</div>
-</div>
-</div>
-<div class="orders-container">
-<div class="orders">
-    <h1>Recent Orders</h1>
-</div>
-</div>
-<div class="items-container">
-    <div class="items">
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-item">
+            <div>
+            <h2>Welcome {{ userData.firstName }} {{ userData.lastName }}</h2>
+            <h3>Info:</h3>
+            <p><strong>Email:</strong> {{ userData.email }}</p>
+            <p><strong>Address:</strong> {{ userData.address }}</p>
+            <p><strong>Phone:</strong> {{ userData.phone }}</p>
+            <button (click)="logout()">Logout</button>
+            </div>
+        </div>
     </div>
 </div>
+<div class="favorite">
+<h1 class="favorite-color">Here are some of your favorite movies</h1>
+</div>
+<section class="blog-area blog-area-two pt-100 pb-70">
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="blog-item">
+                    <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
+                    <div class="blog-bottom">
+                        <span>Movie Date</span>
+                        <h3><a routerLink="/blog-details">Movie Name</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

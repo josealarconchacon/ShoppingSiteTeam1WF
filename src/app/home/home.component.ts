@@ -23,5 +23,7 @@ export class HomeComponent implements OnInit{
   dramaCollection: string = "./assets/drama-collection.jpg";
   allCollection: string = "./assets/all-collection.jpg";
 
-  
+  goToGenrePage(genre: string): void {
+    this.router.navigate(['/genre', genre]);
+  }
 }

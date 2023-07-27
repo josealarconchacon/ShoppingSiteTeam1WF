@@ -1,4 +1,16 @@
+/* <<<<<<< HEAD */
 npm.form-style input {
+/* =======
+.container .col-md-6 {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -12px 5px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.form-style input {
+>>>>>>> new-b3 */
   border: 0;
   height: 50px;
   border-radius: 25px;
@@ -20,4 +32,10 @@ npm.form-style input {
 button {
   height: 50px;
   border-radius: 25px;
+  font-size: 14px;
+  font-weight: 900;
+}
+button:hover {
+  color: #ff5733;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 22px 70px 4px;
 }
