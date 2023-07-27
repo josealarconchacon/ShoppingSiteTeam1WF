@@ -18,7 +18,7 @@ body {
 }
 .img-showcase {
   display: block;
-  margin-left: auto;
+  margin-left: 15px;
   margin-right: auto;
   width: 100%;
 }
