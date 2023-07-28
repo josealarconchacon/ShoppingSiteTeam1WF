@@ -27,18 +27,18 @@ export class MovieComponent implements OnInit {
   async get_movie_detail_byID() {
     this.name = this.activeRoute.snapshot.params['name'];
     try {
-      const data_req: any = await this.movieService.getSearchMovieByID(
+      const data_request: any = await this.movieService.getSearchMovieByID(
         this.activeRoute.snapshot.params['id']
       );
-      if (data_req.Response == 'True') {
-        console.log(data_req);
-        this.movie = data_req;
+      if (data_request.Response == 'True') {
+        console.log(data_request);
+        this.movie = data_request;
       }
     } catch (error) {
       console.log('Error: ', error);
     }
   }
-  // access rating object from api
+  // access rating object from api to display the source
   get_movie_rating_source(source: string) {
     const dictionary = {
       'Internet Movie Database': '../../../assets/IMDb_Logo_Square.svg.png',
