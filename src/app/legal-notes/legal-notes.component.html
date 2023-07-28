@@ -9,51 +9,51 @@
 <body>
     <div class="wrapper">
         <p>Hello there, You are in </p>
-        <h1>Ferquently Asked Questions site</h1>
+        <h1>StreamCinema Legal Notes</h1>
 
         <div class="faq" id="f1" (click)="accordion('f1')">
             <button class="dropdown">
-                Q: What is StreamCinema?
+                Intellectual Property Rights
              <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="answer" *ngIf="id === 'f1'">
                 <p>
-                    A: StreamCinema is an extensive database of movies where users can explore detailed ratings and descriptions. It's your go-to platform for an in-depth understanding of films from around the world.
+                    All copyrights, trademarks, patents, design rights, and other intellectual property rights (registered and unregistered) in and on StreamCinema belong to StreamCinema and/or third parties. Users may not use, copy, edit, vary, reproduce, publish, display, distribute, store, transmit, commercially exploit or disseminate the Intellectual Property without prior written consent.
                 </p>
             </div>
         </div>
 
         <div class="faq" id="f2" (click)="accordion('f2')">
             <button class="dropdown">
-                Q: How can I search for a specific movie on StreamCinema?
+                Accuracy of Information
              <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="answer" *ngIf="id === 'f2'">
                 <p>
-                    A: Simply enter the name of the movie into the search bar located at the top of our homepage and press Enter. The related results will be displayed on the screen.
+                    While we strive to keep our database updated and as accurate as possible, StreamCinema does not guarantee the accuracy, reliability or completeness of the information provided on the site. Use of the site and reliance on any information from the site is solely at the user's own risk.
                 </p>
             </div>
         </div>
 
         <div class="faq">
             <button class="dropdown"  id="f3" (click)="accordion('f3')">
-               Q: How often is the movie database updated?
+                Third Party Links
              <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="answer" *ngIf="id === 'f3'">
                 <p>
-                    A: Our database is updated daily with new movie releases, ratings, and descriptions to ensure our users are always up-to-date with the latest film industry trends.
+                    The site may contain links to external websites that are not provided or maintained by or in any way affiliated with StreamCinema. Please note that StreamCinema does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.
             </div>
         </div>
 
         <div class="faq"  id="f4" (click)="accordion('f4')">
             <button class="dropdown">
-                Q: How does StreamCinema rate movies?
+                Applicable Law
              <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="answer" *ngIf="id === 'f4'">
                 <p>
-                    Our ratings are based on a combination of critic reviews, audience feedback, and in-house analysis by our team of movie experts.
+                    These terms and conditions and any disputes arising out of or in connection with it shall be governed by and construed in accordance with the laws of the jurisdiction in which StreamCinema operates.
                 </p>
             </div>
         </div>

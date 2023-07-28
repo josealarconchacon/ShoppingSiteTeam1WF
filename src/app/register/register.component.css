@@ -1,3 +1,4 @@
+
 .container .col-md-6 {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -12px 5px 0px inset,
@@ -24,7 +25,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ccc;
 }
 button {
   height: 50px;

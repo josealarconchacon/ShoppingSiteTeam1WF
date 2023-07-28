@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Register": [
+    {
+      "id": 1,
+      "username": 1,
+      "email": "some comment",
+      "password": "",
+      "confirmPassword": 1
+    },
+    {
+      "username": "adnan",
+      "email": "adnan@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 2
+    },
+    {
+      "username": "adnan",
+      "email": "adnan1@gmail.com",
+      "password": "adnan1",
+      "confirmPassword": "adnan1",
+      "id": 3
+    },
+    {
+      "username": "adnan",
+      "email": "adnan2@gmail.com",
+      "password": "adnan1",
+      "confirmPassword": "adnan1",
+      "id": 4
+    },
+    {
+      "username": "adnan",
+      "email": "adnan3@gmail.com",
+      "password": "adnan3",
+      "confirmPassword": "adnan3",
+      "id": 5
+    },
+    {
+      "username": "adnan2",
+      "email": "adnan2@gmail.com",
+      "password": "adnan2",
+      "confirmPassword": "adnan2",
+      "id": 6
+    }
+  ],
+  "Login": [
+    {
+      "id": 1,
+      "username": "some comment",
+      "password": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

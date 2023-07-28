@@ -1,0 +1,13 @@
+/* Add a custom CSS class for the row to display movies horizontally */
+.movie-row {
+    display: flex;
+    flex-wrap: wrap; /* This ensures that items wrap to the next line if there's not enough space */
+    justify-content: space-between; /* Adjust the spacing between movies */
+    gap: 20px; /* Add some gap between the movie cards */
+  }
+  
+  /* Optionally, you can set a maximum width for each movie card to control their size */
+  .movie-card {
+    max-width: 300px; /* Adjust the value as per your preference */
+  }
+  

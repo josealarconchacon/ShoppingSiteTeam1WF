@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Return & Refunds</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>Hello there, Thank you for shopping with Stylehub! We value your satisfaction and aim to provide you with an exceptional shopping experience. In the event that you need to return a product or request a refund, we have established the following </p>
+        <h1>Return and Refunds Policy.</h1>
+
+        <div class="faq" id="f1" (click)="accordion('f1')">
+            <button class="dropdown">
+            Returns Eligibility
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f1'">
+                <p>
+                    1. Products eligible for return must be unused, unworn, and in their original condition with all tags and packaging intact.<br>
+                    2. We accept returns within [insert number of days] days from the date of purchase. After this period, we regret that we cannot process any returns or refunds.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq" id="f2" (click)="accordion('f2')">
+            <button class="dropdown">
+            Return Process
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f2'">
+                <p>
+                    1. To initiate a return, please contact our customer support team at [insert contact information] within the return eligibility period stated above. Provide your order number and details regarding the item you wish to return.<br>
+                    2. Our customer support team will provide you with a Return Merchandise Authorization (RMA) number and guide you through the return process.<br>
+                    3. Ensure that the product is securely packaged to prevent any damage during transit. Include the RMA number on the return package.<br>
+                    4. Ship the return package to the address provided by our customer support team. Please note that the shipping cost for returns will be your responsibility, unless the return is due to an error on our part.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="dropdown"  id="f3" (click)="accordion('f3')">
+                Refunds
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f3'">
+                <p>
+                 1. Once we receive the returned item and confirm that it meets our return eligibility criteria, we will process your refund.<br>
+                 2. Refunds will be issued using the original payment method. Please allow [insert number of days] days for the refund to reflect in your account, as processing times may vary based on your financial institution.<br>
+                 3. If the return is due to an error on our part or a defective product, we will reimburse you for the shipping costs incurred in returning the item.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f4" (click)="accordion('f4')">
+            <button class="dropdown">
+                How can I track my order?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f4'">
+                <p>
+                    Once your order is shipped, you will receive a confirmation email with a tracking number. You can use this number to track the status of your shipment on our website or the courier's website.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f5" (click)="accordion('f5')">
+            <button class="dropdown">
+                Non-Returnable Items
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f5'">
+                <p>
+                The following items are not eligible for return:<br>
+                - Intimate apparel (e.g., underwear, swimwear, or lingerie)<br>
+                - Personal care items (e.g., cosmetics, skincare products, or fragrances)<br>
+                - Customized or personalized items<br>
+                - Gift cards or vouchers<br>
+            </div>
+        </div>
+
+        <div class="faq"  id="f6" (click)="accordion('f6')">
+            <button class="dropdown">
+                Exchanges
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f6'">
+                <p>
+                    We currently do not offer direct exchanges. If you wish to exchange an item, please follow the return process mentioned above and place a new order for the desired item.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f7" (click)="accordion('f7')">
+            <button class="dropdown">
+                Damaged or Incorrect Items
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f7'">
+                <p>
+                    In the rare event that you receive a damaged or incorrect item, please contact our customer support team immediately. We will resolve the issue by providing a replacement, issuing a refund, or arranging for the return of the incorrect item, based on the specific circumstances.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq"  id="f8" (click)="accordion('f8')">
+            <button class="dropdown">
+                Modifications to the Policy
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f8'">
+                <p>
+                    Stylehub reserves the right to modify or update this Return and Refunds Policy at any time. Any changes will be effective immediately upon posting the updated policy on our website.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

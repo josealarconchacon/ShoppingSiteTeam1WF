@@ -28,7 +28,7 @@
         <span class="rating-num">{{ movieData.rating }}</span>
       </div>
 
-      <div class="movie-detail">
+      <div class="movie-detail" >
         <h2>Movie Description:</h2>
         <p>{{ movieData.description }}</p>
         <ul>
@@ -48,11 +48,10 @@
             Writers: <span>{{ movieData.writers }}</span>
           </li>
         </ul>
+          <button class="on-hover" type="button">View Movie</button>
+          <button class="on-hover" type="button" (click)="saveMovieToFavorites(movieData)">Save</button>
       </div>
-      <div class="category-btn">
-        <button class="on-hover" type="button">View Triller</button>
-        <button class="on-hover" type="button">Save</button>
-      </div>
+      
     </div>
   </div>
   <!-- trailer  -->

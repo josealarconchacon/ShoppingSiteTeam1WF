@@ -19,18 +19,19 @@
     
     <div class="container">
         
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item" *ngIf="movies.length > 0">
-                    
-                    <div class="blog-bottom" *ngFor="let movie of movies">
-                        <img [src]="movie.image" alt="Movie Poster">
-                        <span>Year Realized: {{ movie.year }}</span>
-                        <h3><a routerLink="/blog-details"> {{movie.title}} </a></h3>
-                        <a class="blog-btn" routerLink="/blog-details">Details Component</a>
-                    </div>
+        <div class="row movie-row">
+            <div class="col-sm-6 col-lg-4 movie-card" *ngFor="let movie of movies">
+              <div class="blog-item" *ngIf="movies.length > 0">
+                <div class="blog-bottom">
+                  <img [src]="movie.image" alt="Movie Poster">
+                  <span>Year Realized: {{ movie.year }}</span>
+                  <h3><a routerLink="/blog-details">{{ movie.title }}</a></h3>
+                  <p>{{ movie.description }}</p>
+                  <button (click)="deleteMovie(movie)">Delete</button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+          
     </div>
 </section>

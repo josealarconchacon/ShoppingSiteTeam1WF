@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>At StreamCinema, we believe that our success is deeply intertwined with the expertise, passion, and commitment of our team. We are always looking for talented individuals who share our love for cinema and our commitment to creating the best user experience.</p>
+        <h1>Careers at StreamCinema</h1>
+
+        <div class="faq" id="f1" (click)="accordion('f1')">
+            <button class="dropdown">
+                Why Join StreamCinema?
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f1'">
+                <p>
+                    Dynamic Work Environment: Be part of a team where your ideas count, your growth matters, and where your passion for movies can truly shine.<br>
+                    Innovation: Work with cutting-edge technologies as you contribute to developing one of the most comprehensive movie databases.<br>
+                    A Passionate Team: Join a team of movie enthusiasts who are as passionate about cinema as they are about creating an exceptional product.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="faq" id="f2" (click)="accordion('f2')">
+            <button class="dropdown">
+                Current Openings
+             <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="answer" *ngIf="id === 'f2'">
+                <p>
+                    Front-End Developer: We're looking for a skilled Front-End Developer with experience in Angular to contribute to the continuous improvement of our platform.<br>
+                    Data Analyst: Help us understand our data better to serve our users better. Experience with data analytics tools required.<br>
+                    Movie Content Researcher: Assist in researching and creating rich content for our movie database. A love for movies is a must!<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

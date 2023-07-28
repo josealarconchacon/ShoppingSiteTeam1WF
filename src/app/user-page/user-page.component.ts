@@ -83,4 +83,12 @@ export class UserPageComponent {
       }
     );
   }
+
+  deleteMovie(movie: any): void {
+    const movieIndex = this.movies.indexOf(movie);
+    if (movieIndex !== -1) {
+      // Remove the movie from the movies array
+      this.movies.splice(movieIndex, 1);
+    }
+  }
 }
